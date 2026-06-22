@@ -28,10 +28,11 @@ jobs:
         - { qemu_arch: x86_64,  appimage_arch: x86_64 }
         - { qemu_arch: armv7,   appimage_arch: armhf }
         - { qemu_arch: aarch64, appimage_arch: aarch64 }
+        - { qemu_arch: riscv64, appimage_arch: riscv64 }
+        - { qemu_arch: loongarch64, appimage_arch: loongarch64 }
 
     steps:
     - name : Checkout
-      if: ${{ github.event_name != 'workflow_dispatch' }}
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
